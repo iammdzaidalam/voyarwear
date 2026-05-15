@@ -1,30 +1,36 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import { AuthProvider } from "./context/AuthContext";
+import { Poppins, Playfair_Display } from 'next/font/google';
+import './globals.css';
+import ClientShell from './components/ClientShell';
+import AuthProvider from './components/AuthProvider';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const poppins = Poppins({
+  variable: '--font-poppins',
+  subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700'],
+  display: 'swap',
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const playfair = Playfair_Display({
+  variable: '--font-playfair',
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  style: ['normal', 'italic'],
+  display: 'swap',
 });
 
 export const metadata = {
-  title: "VoyarWear Optics - Premium Eyewear Store",
-  description: "Shop premium eyewear frames - Men's, Women's, and Unisex styles. Wayfarer, Aviator, Cat-Eye, Round frames and more. Free shipping on orders over $50.",
+  title: 'VoyarWear | Premium Handcrafted Eyewear',
+  description:
+    'Discover handcrafted eyewear at the intersection of precision engineering and timeless aesthetics. Optical frames and sunglasses for the discerning eye.',
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">
-        <AuthProvider>{children}</AuthProvider>
+    <html lang="en" className={`${poppins.variable} ${playfair.variable}`}>
+      <body className="min-h-screen antialiased">
+        <AuthProvider>
+          <ClientShell>{children}</ClientShell>
+        </AuthProvider>
       </body>
     </html>
   );
