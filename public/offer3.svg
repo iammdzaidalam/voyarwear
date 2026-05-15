@@ -1,0 +1,19 @@
+<svg width="1200" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="400" fill="url(#grad3)"/>
+  <text x="600" y="120" font-size="72" font-weight="bold" text-anchor="middle" fill="white" font-family="Arial">
+    FLASH SALE
+  </text>
+  <text x="600" y="200" font-size="48" text-anchor="middle" fill="white" font-family="Arial">
+    LIMITED TIME OFFER
+  </text>
+  <circle cx="200" cy="150" r="35" fill="rgba(255,255,255,0.25)"/>
+  <circle cx="1000" cy="300" r="50" fill="rgba(255,255,255,0.2)"/>
+  <rect x="450" y="260" width="300" height="80" fill="rgba(255,255,255,0.3)" rx="15"/>
+  <text x="600" y="310" font-size="32" text-anchor="middle" fill="white" font-family="Arial">SHOP NOW</text>
+</svg>
