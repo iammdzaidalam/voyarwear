@@ -2,6 +2,7 @@ import { Poppins, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import ClientShell from './components/ClientShell';
 import AuthProvider from './components/AuthProvider';
+import RazorpayScript from './components/RazorpayScript';
 
 const poppins = Poppins({
   variable: '--font-poppins',
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${poppins.variable} ${playfair.variable}`}>
       <body className="min-h-screen antialiased">
+        <RazorpayScript />
         <AuthProvider>
           <ClientShell>{children}</ClientShell>
         </AuthProvider>
